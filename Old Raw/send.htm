@@ -1,0 +1,151 @@
+<html>
+<!--Copyright (C) 2004  Derlin Technologies. All rights reserved.-->
+<!--Author:Christoff Truter-->
+<!--Should you wish to use this code, please contact me at cstruter@telkomsa.net-->
+<head>
+
+<title>Send</title>
+
+<script language="javascript" src="js/cookies.js"></script>
+<script language="javascript" src="js/products.js"></script>
+<script language="javascript" src="js/cartitems.js"></script>
+<script language="javascript" src="js/validate.js"></script>
+<script language="javascript" src="js/mailer.js"></script>
+<link href="style/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<noscript>
+<table border="1" width="100%" cellspacing="0" cellpadding="0" bordercolor="#C0C0C0">
+  <tr>
+    <td width="100%" bgcolor="#FF8C8C">
+      <p align="center"><b>Alert</b></td>
+  </tr>
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><font color="#000000">This page can't be viewed correctly because Javascript
+      is currently disabled, not available, or being blocked, for more
+      information, please <a href="FAQ/FAQ0.html">click here.</a></font></p>
+    </td>
+  </tr>
+</table>
+</noscript>
+
+<body>
+
+<FORM name="form1" onsubmit="return validateForm(this)">
+
+<script>
+
+loadXML("xml/products.xml");
+quarrays();
+
+var owe=0;
+var order="Product(s) Selected %0A";
+cartitems();
+</script>
+
+<table border="0" width="550" bgcolor="#CCCCCC" cellspacing="0" cellpadding="4">
+<tr>
+<td bgcolor="#808080"><p class="styl1">Quantity</td><td bgcolor="#808080"><p class="styl1">Product</td><td bgcolor="#808080"><p class="styl1">Price</td>
+</tr>
+
+<script>
+
+var myString=GetCookie("shop");
+
+if (myString != null) 
+{
+newArray=myString.split(',');
+
+for (var i=0;i<(newArray.length);i++)
+{
+if (newArray[i] != 0)
+{
+owe=owe+(Price[i]*newArray[i]);
+
+order=order+newArray[i]+' x '+Product[i]+':'+(Price[i]*newArray[i])+'%0A';
+
+wysitems='<tr bordercolor="#000000" bgcolor="#FFFFFF"><td width="5%"><p class="styl3">'+
+''+newArray[i]+'</td><td width="75%"><p class="styl3">'+Product[i]+'</p></td>'+
+'<td width="20%"><p class="styl3">'+currency+' '+cent(Price[i]*newArray[i],devider)+'</td></tr>';
+document.write(wysitems);
+}
+}
+order=order+'Total:'+owe+'%0A';
+document.write('<input type="hidden" name="products" value="'+order+'">');
+}
+if (owe==0) document.write('<tr><td bgcolor="#FFFFFF" colspan="3"><p class="styl2" align="center">No Products Selected</p></td></tr>');
+</script>
+
+
+
+<tr><td bgcolor="#808080" colspan="3"><p class="styl1" align="right">Total: <script>document.write(currency+cent(owe,devider));</script></td></tr>
+
+
+<script>
+
+verander='<input type="hidden" name="amount" value="'+owe+'">';
+
+document.write(verander);
+
+</script>
+
+
+  <tr>
+    <td width="85"><b><font face="Arial" size="2">First Name</font></b></td>
+    <td width="349">
+<input type="text" name="fname" size="40" MAXLENGTH="40">
+</td>
+  </tr>
+  <tr>
+    <td width="85"><b><font face="Arial" size="2">Last Name</font></b></td>
+    <td width="349">
+<input type="text" name="lname" size="40" MAXLENGTH="40">
+</td>
+  </tr>
+  <tr>
+    <td width="85"><b><font face="Arial" size="2">E-Mail</font></b></td>
+    <td width="349">
+<input type="text" name="email" size="40" MAXLENGTH="40">
+</td>
+  </tr>
+  <tr>
+    <td width="85"><b><font face="Arial" size="2">Address 1</font></b></td>
+    <td width="349">
+<input type="text" name="add1" size="40" MAXLENGTH="40">
+</td>
+  </tr>
+  <tr>
+    <td width="85"><b><font face="Arial" size="2">Address 2</font></b></td>
+    <td width="349">
+<input type="text" name="add2" size="40" MAXLENGTH="40">
+</td>
+  </tr>
+
+  <tr>
+    <td width="85"><b><font face="Arial" size="2">Telephone</font></b></td>
+    <td width="349">
+<input type="text" name="tel" size="30" MAXLENGTH="30">
+</td>
+  </tr>
+  <tr>
+    <td width="85"><b><font face="Arial" size="2">Cellphone</font></b></td>
+    <td width="349">
+
+<input type="text" name="cell" size="30" MAXLENGTH="30">
+
+</td>
+  </tr>
+  <tr>
+<td class="styl5" colspan="3">
+<input type="submit" value="Submit">&nbsp;&nbsp; <input type="reset" value="Clear">
+</td>
+  </tr>
+
+</table>
+
+</form>
+
+</body>
+</html>

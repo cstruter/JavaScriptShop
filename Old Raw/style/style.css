@@ -1,0 +1,56 @@
+td.but1 {
+   cursor:hand;
+   background:#CCCCCC;
+   text-align: center;
+   font: 10px Verdana, Arial, Helvetica, sans-serif;}
+
+td.but2 {
+   cursor:hand;
+   background:#888888;
+   text-align: center;
+   font: 10px Verdana, Arial, Helvetica, sans-serif;}
+
+p.doc {margin: 0px 7px; word-spacing: 0px;font: 12px Verdana, Arial, Helvetica, sans-serif;}
+p.doc2 {color:#000000;margin: 0px 7px; word-spacing: 0px;font: 12px Verdana, Arial, Helvetica, sans-serif;}
+
+.styl1 {
+	color: #000000;
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+	
+.styl2 {
+	color: #000000;
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}	
+
+.styl3 {
+	color: #000000;
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}	
+
+.styl4 {
+	color: #000000;
+	background:#FFFFFF;
+	text-align:center;
+	font-size: 14px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.styl5 {
+	color: #FFFFFF;
+	background:#808080;
+	border:#C0C0C0;
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.styl6 {
+	color: #FFFFFF;
+	background:#C0C0C0;
+	border:#C0C0C0;
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
