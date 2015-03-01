@@ -1,0 +1,9 @@
+﻿[
+    { "id": "1", "image": "1.jpg", "price": 42.74, "name": "Pro AngularJS (Expert's Voice in Web Development)" },
+    { "id": "2", "image": "2.jpg", "price": 28.51, "name": "AngularJS: Up and Running: Enhanced Productivity with Structured Web Apps" },
+    { "id": "3", "image": "3.jpg", "price": 9.99, "name": "Recipes with Angular.js" },
+    { "id": "4", "image": "4.jpg", "price": 40.49, "name": "Mastering Web Application Development with AngularJS" },
+    { "id": "5", "image": "5.jpg", "price": 40.44, "name": "Single Page Web Applications: JavaScript end-to-end" },
+    { "id": "6", "image": "6.jpg", "price": 28.06, "name": "Learning AngularJS" },
+    { "id": "7", "image": "7.jpg", "price": 44.99, "name": "AngularJS Web Application Development Cookbook" }
+]
